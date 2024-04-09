@@ -16,13 +16,34 @@
             </div>
     </body>
 
+    <!-- IMPORTE DO SDK DO FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
 
+    <!-- IMPORTE DO SDK DO FIRESTORE -->
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
 
     <script>
-        <!-- DADOS DE CREDENCIAIS DE ACESSO AO FIREBASE -->
-        
+        /* DADOS DE CREDENCIAIS DE ACESSO AO FIREBASE */
+        const firebaseConfig = {
+            apiKey: "AIzaSyB4YezP7prr-6f3jBnx2elHmxALyPVTjdA",
+            authDomain: "app-libri-karol.firebaseapp.com",
+            projectId: "app-libri-karol",
+            storageBucket: "app-libri-karol.appspot.com",
+            messagingSenderId: "1092574615631",
+            appId: "1:1092574615631:web:f199782f86772449f9f23a",
+            measurementId: "G-9KVKYL9CX4"
+          };
+
+          /* INICIALIZA O FIREBASE NA APLICAÇÃO WEB */
+          firebase.initializeApp(firebaseConfig);
+
+          /* INICIALIZA A CONEXÃO COM O BANCO NOSQL FIRESTORE */
+          const db = firebase.firestore();
+
+          /* TESTE DA CONEXÃO COM O FIRESTORE */
+          //console.log('teste');
+          //console.log(db);
+
     </script>
 
     <script src="app.js"></script>
